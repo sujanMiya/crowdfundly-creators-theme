@@ -1,0 +1,274 @@
+.crowdfundly-newsletter {
+  &__newsletter-content1 {
+    position: relative;
+
+    &__newsletter-content2 {
+      position: relative;
+      background-color: #f1f6ff;
+      border: 2px solid $borderRgba;
+      border-radius: 10px;
+      rifat: hidden;
+
+      &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 50px 30px;
+        text-align: center;
+
+        @include media-breakpoint-down(sm) {
+          padding: 20px 20px;
+        }
+
+        &-heading {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 48px;
+          text-align: center;
+          letter-spacing: 0.0015em;
+          margin: 0;
+          color: $gray-400;
+
+          @include media-breakpoint-down(xs) {
+            font-size: 18px;
+          }
+        }
+
+        &-title {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 28px;
+          text-align: center;
+          letter-spacing: 0.005em;
+          margin: 0;
+          width: 399px;
+          color: $black-300;
+          padding-top: 20px;
+          margin: auto;
+
+          @include media-breakpoint-down(xs) {
+            width: auto;
+          }
+        }
+
+        &-input {
+          width: 400px;
+          padding-top: 30px;
+          margin: auto;
+          position: relative;
+
+          @include media-breakpoint-down(xs) {
+            width: 100%;
+          }
+
+          &__field {
+            width: 100%;
+            height: 60px;
+            background-color: $white;
+            color: $black-300;
+            border-radius: 6px;
+            border: none;
+            padding: 20px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 0.005em;
+            font-family: "Work Sans", sans-serif;
+            opacity: 60%;
+
+            @include media-breakpoint-down(xs) {
+              height: 40px;
+            }
+          }
+
+          &__send-btn {
+            position: absolute;
+            right: 0;
+            top: 33%;
+            width: 60px;
+            height: 60px;
+            background: $blue-400;
+            color: white;
+            border: noe;
+            border: none;
+            border-radius: 6px;
+
+            @include media-breakpoint-down(xs) {
+              height: 40px;
+              top: 43%;
+              width: 43px;
+            }
+
+            &--icon {
+              font-size: 20px;
+              @include media-breakpoint-down(xs) {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      &__sub-shape {
+        position: absolute;
+        background-color: $blue-400;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        right: -4%;
+        top: 36%;
+        z-index: -1;
+
+        @media (max-width: 1250px) {
+          display: none;
+        }
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+
+      &__newsletter-content3 {
+        width: 100%;
+        height: 370px;
+        position: relative;
+        filter: blur(60px);
+        rifat: hidden;
+
+        @include media-breakpoint-down(xs) {
+          height: 400px;
+        }
+
+        &__shape1 {
+          position: absolute;
+          background-color: $lightblue;
+          width: 119px;
+          height: 119px;
+          border-radius: 50%;
+          left: 5%;
+          top: 5%;
+        }
+
+        &__shape2 {
+          position: absolute;
+          background-color: $blue-400;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          left: 50%;
+          top: 33%;
+        }
+
+        &__shape3 {
+          position: absolute;
+          background-color: $blue-400;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          right: 0;
+          top: 36%;
+        }
+      }
+    }
+  }
+}
+
+.newsletter-collcontent1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.newsletter-collcontent1 {
+  position: relative;
+  filter: blur(300px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $darkPurple;
+    width: 237px;
+    height: 237px;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.checkrow {
+  justify-content: center !important;
+}
+
+.news-letter-checkbox {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 575px) {
+  .news-letter-checkbox {
+    display: block;
+    justify-content: right;
+  }
+
+  .checkrow {
+    justify-content: left !important;
+  }
+
+  .custom-checkbox {
+    padding-bottom: 10px;
+    text-align: left;
+  }
+}
+
+.custom-control-label {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  margin-left: 8px;
+}
+
+.custom-checkbox .custom-control-label::before {
+  border-radius: 0.25rem;
+  height: 16px;
+  width: 16px;
+  border: 2px solid rgba(94, 91, 91, 0.342);
+  background-color: transparent;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #007bff;
+  height: 16px !important;
+  width: 16px !important;
+  border: 1px solid #007bff;
+}
+
+.custom-control-label::after {
+  position: absolute !important;
+  top: 0 !important;
+  left: -2px !important;
+  display: block !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  content: "" !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 50% 50% !important;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none !important;
+}

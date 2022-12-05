@@ -1,0 +1,70 @@
+.affiliate-content-layout {
+    &__header {
+        text-align: center;
+
+        &__heading {
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 60px;
+            letter-spacing: 0.0025em;
+            color: $black-50;
+            margin: 0;
+            @include media-breakpoint-down(sm){
+                font-size: 30px;
+            }
+        }
+
+        &__title {
+            font-family: 'Work Sans', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+            letter-spacing: 0.005em;
+            color: $black-300;
+            margin: 0;
+            padding-top: 20px;
+            width: 577px;
+            margin: auto;
+
+            @include media-breakpoint-down(md) {
+                width: auto;
+            }
+        }
+    }
+
+    &__image {
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+
+        &-img {
+            width: 82%;
+            height: auto;
+        }
+    }
+
+    &__affiliate-card {
+        @include media-breakpoint-up(lg) {
+            margin-top: -90px;
+        }
+
+
+        &__feature {
+            padding: 150px 0;
+            @include media-breakpoint-down(md){
+                padding: 60px 0;
+            }
+
+            &__desc {
+                padding: 60px 0;
+                @include media-breakpoint-down(md){
+                    padding-top: 60px;
+                }
+            }
+        }
+    }
+}

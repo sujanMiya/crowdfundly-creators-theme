@@ -1,0 +1,684 @@
+/*
+Theme Name: Crowdfundly WP
+Theme URI: https://crowdfundly.com
+Author: Team Crowdfundlly
+Author URI: https://crowdfundly.com
+Description: WordPress theme for Crowdfundly
+Requires at least: 5.3
+Tested up to: 5.6
+Requires PHP: 5.6
+Version: 1.2
+Text Domain: crowdfundly-theme
+*/
+
+@media (min-width: 992px) {
+  .support-container .support-main .content-layout .form-content-layout,
+  .support-container .support-main .content-layout .form-layout {
+    width: 830px;
+  }
+}
+
+.crowdfundly-header__menu-item__list > a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  color: #3f454f;
+  text-decoration: none !important;
+  text-transform: capitalize;
+  transition: all 0.2s ease-in-out;
+}
+.crowdfundly-header__menu-item__list a.dropdown-toggle {
+  padding: 50px 0;
+}
+
+.dropdownHeader .dropdown-menu {
+  background-color: #e7efff;
+}
+.dropdownHeader .dropdown-menu::after {
+  content: none;
+}
+.dropdownHeader .dropdown-menu li {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+.dropdownHeader .dropdown-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.crowdfundly-header__menu-item__list.active > a {
+  color: #0070b0 !important;
+  position: relative;
+}
+.crowdfundly-header__menu-item__list.active > a::before {
+  content: "";
+  position: absolute;
+  background-color: #0070b0;
+  width: 15px;
+  height: 3px;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-23px, 18px);
+  border-radius: 10px;
+}
+
+.crowdfundly-header__menu-item__list:last-child {
+  margin-right: 0;
+}
+.crowdfundly-header__menu-item__list:last-child .nav-link {
+  font-family: "Poppins", sans-serif !important;
+  background-color: #ff8d24;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  padding: 15px 24px;
+}
+
+.crowdfundly-header__menu-item__list-item.activeMenu {
+  color: #3f454f !important;
+}
+.crowdfundly-header__menu-item__list-item.activeMenu::before {
+  background-color: transparent;
+}
+.dropdown-menu > li > a:hover {
+  background-color: transparent;
+}
+
+.crowdfundly-header__menu-item__list:last-child a.nav-link:hover {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-3px);
+  box-shadow: 0px 12px 13px 2px #5776f31c;
+  color: #fff !important;
+}
+.dropdownHeader .dropdown-menu .active a {
+  background-color: transparent;
+}
+#header
+  .dropdownHeader
+  .dropdown-menu
+  .crowdfundly-header__menu-item__list
+  a:before {
+  content: none;
+}
+
+@media (max-width: 575.98px) {
+  #navi > .crowdfundly-header__menu-item__list:last-child {
+    display: inline-block;
+  }
+  #header .crowdfundly-header__menu-item__list:last-child a.nav-link {
+    color: #fff;
+  }
+  .crowdfundly-header__menu-item__list.active a::before {
+    content: none;
+  }
+  #header .crowdfundly-header__menu-item__list .dropdownHeader .dropdown-menu {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    width: 0;
+    height: 0;
+  }
+  #header
+    .crowdfundly-header__menu-item__list.show
+    .dropdownHeader
+    .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+    height: auto;
+    min-width: 260px !important;
+    min-height: auto !important;
+    background-color: #e7efff;
+  }
+}
+
+/* better docs */
+.post-type-archive-docs .betterdocs-wraper {
+  margin-top: 100px;
+}
+.betterdocs-single-wraper {
+  margin-top: 100px;
+  background-color: transparent !important;
+}
+
+.doc-single-content-wrapper {
+  position: relative;
+}
+.docs-single-main .doc-single-content-wrapper .betterdocs-breadcrumb {
+  margin-top: -170px !important;
+  margin-left: -36px !important;
+  width: 106%;
+  padding: 0 24px;
+  background-color: #fff;
+}
+
+.docs-single-cat-wrap {
+  border: 1px solid #fff;
+}
+
+.betterdocs-live-search {
+  width: 100%;
+}
+.betterdocs-searchform .betterdocs-search-field {
+  font-size: 25px !important;
+}
+
+.betterdocs-categories-wrap.layout-flex.docs-col-2 .docs-single-cat-wrap,
+.betterdocs-categories-wrap.single-kb
+  .docs-single-cat-wrap
+  .docs-item-container {
+  background: transparent;
+}
+
+.betterdocs-categories-wrap .docs-item-count,
+.betterdocs-categories-wrap.single-kb .docs-cat-title-inner span {
+  background-color: transparent !important;
+  color: #528ffe;
+}
+
+.betterdocs-categories-wrap.single-kb .docs-cat-title-inner span {
+  font-size: 20px !important;
+}
+.docs-cat-title-wrap .docs-cat-title {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.docs-cat-title-wrap .docs-cat-title .docs-cat-heading {
+  padding-left: 0;
+  margin-top: 20px;
+}
+.docs-cat-title-inner {
+  border-bottom: none !important;
+}
+
+.docs-cat-title img {
+  height: 45px !important;
+}
+
+/* fluent form */
+.cf-input-group .ff-el-group {
+  position: relative;
+  z-index: 1;
+}
+.cf-input-group .ff-el-form-control {
+  width: 100% !important;
+  border: none !important;
+}
+.cf-input-group select.ff-el-form-control {
+  background-color: #fff;
+  height: 50px !important;
+  padding: 0 20px 0 10px;
+  border-radius: 6px;
+}
+
+.fluentform .cf-input-group .ff-el-group,
+.fluentform .cf-input-group.ff-el-group {
+  margin-bottom: 30px;
+}
+
+.fluentform .cf-input-group .ff-el-input--label {
+  margin-bottom: 0;
+}
+.cf-input-group .ff-el-input--content > * {
+  margin-bottom: 0 !important;
+}
+
+.ff-btn-submit.ff-btn-lg.support-btn {
+  margin-top: 20px !important;
+}
+
+/* single page */
+.container.page-wrapper {
+  margin-top: 130px;
+  max-width: 960px;
+  width: 100%;
+}
+.container.page-wrapper .page-content p {
+    margin-bottom: 15px;
+}
+@media (max-width: 575.98px) {
+  .container.page-wrapper {
+    margin-top: 100px;
+  }
+}
+
+/* single post */
+.container.single-post {
+  max-width: 960px !important;
+}
+.single-container {
+  padding-top: 120px;
+  position: relative;
+}
+.single-container h1 {
+  font-size: 40px;
+}
+.crowdfundly-blog-info-card__wrapper__image {
+  padding: 25px 35px;
+}
+.single-container .meta-wrapper {
+  display: flex;
+  align-items: center;
+}
+.single-container .wp-block-image {
+  padding: 20px 40px;
+}
+
+.page-wrapper .page-title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.page-wrapper .page-content {
+    margin-top: 50px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+/* home page call to action */
+.crowdfundly-solutions-header__crowdfundly-solutions1__content .row {
+  width: 100%;
+}
+span.pricing-main-heading__inner__table-table-body-footer__content-list-item__item-desc {
+  margin-right: 6px;
+}
+.crowdfundly-solutions-header__crowdfundly-solutions1__content-desc {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.crowdfundly-solutions-header__crowdfundly-solutions1__content-desc
+  .crowdfundly-solutions-text {
+  color: #66667d;
+}
+.crowdfundly-solutions-list {
+  display: flex;
+  width: 100%;
+}
+
+.crowdfundly-solutions-header__crowdfundly-solutions1__content-btn-body {
+  background-color: #ff8d24;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.crowdfundly-solutions-header__crowdfundly-solutions1__content-btn-body-featue {
+  /* background-color: #FF8D24; */
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.crowdfundly-solutions-header__crowdfundly-solutions1__content-btn-body:hover {
+  color: #fff;
+  background-color: #ff8d24;
+}
+
+@media (max-width: 575.98px) {
+  .crowdfundly-solutions-header__crowdfundly-solutions1__solutions2 {
+    height: 440px;
+  }
+  .crowdfundly-solutions-header__crowdfundly-solutions1__content-heading {
+    margin-bottom: 15px;
+  }
+  .crowdfundly-solutions-list {
+    flex-direction: column;
+  }
+  .crowdfundly-solutions-header__crowdfundly-solutions1__content-desc {
+    margin-right: 0;
+    padding-top: 0;
+  }
+
+  .crowdfundly-features-main-header {
+    margin-bottom: 40px;
+  }
+}
+
+/* home page pricing plan */
+.pricing-main-heading__inner {
+  margin-top: 60px;
+}
+
+/* demo popup */
+.demo-popup {
+  display: none;
+}
+.demo-popup-wrapper.show .demo-popup {
+  display: block;
+  position: fixed;
+  width: 65vw;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  z-index: 9999;
+}
+.demo-popup-wrapper.show .demo-popup-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  z-index: 9998;
+}
+
+.demo-popup-inner {
+  display: flex;
+}
+.demo-popup-item {
+  width: 23%;
+  padding: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.demo-popup-item:last-child {
+  margin-right: 0;
+}
+.demo-popup-item .icon {
+  background-color: #0070b0;
+  border-radius: 50%;
+  padding: 6px;
+}
+.demo-popup-item .icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.demo-popup-title {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.demo-popup-close {
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  padding: 0 10px 10px;
+}
+.demo-title {
+  margin: 15px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.demo-link {
+  font-size: 12px;
+}
+.demo-link span {
+  margin-right: 8px;
+}
+.demo-link img {
+  width: 15px;
+  height: 14px;
+}
+
+@media (max-width: 575.98px) {
+  .demo-popup-wrapper.show .demo-popup {
+    max-width: 100%;
+    width: 90vw;
+    top: 120px;
+    height: auto;
+  }
+  .demo-popup-inner {
+    flex-direction: column;
+    /* padding-bottom: 60px; */
+  }
+  .demo-popup-item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* news latter */
+.crowdfundly-newsletter__newsletter-content1__newsletter-content2__content-title {
+  width: 100%;
+}
+/* fluent form */
+.crowdfundly-newsletter__newsletter-content1 .fluentform {
+  margin-top: 30px;
+}
+.crowdfundly-newsletter__newsletter-content1 form.frm-fluent-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crowdfundly-newsletter__newsletter-content1
+  .ff-t-container.ff-column-container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.crowdfundly-newsletter__newsletter-content1
+  .ff-t-container.ff-column-container
+  .ff-t-column-1 {
+  max-width: 25% !important;
+}
+.crowdfundly-newsletter__newsletter-content1 .ff-el-form-control {
+  border: none;
+}
+.crowdfundly-newsletter__newsletter-content1
+  .ff-t-container.ff-column-container
+  .ff-t-column-2 {
+  padding-left: 0;
+  width: auto !important;
+}
+.crowdfundly-newsletter__newsletter-content1 button.ff-btn {
+  background-color: #0070b0;
+  color: #fff;
+  padding: 10px !important;
+  border: none;
+}
+
+@media (max-width: 575.98px) {
+  .crowdfundly-newsletter__newsletter-content1
+    .ff-t-container.ff-column-container
+    .ff-t-column-1 {
+    max-width: 80% !important;
+  }
+}
+
+/* sales */
+.crowdfundly-platform-desc__wrapper__content-wrapper__text
+  .crowdfundly-platform-desc__wrapper__content-wrapper__text-logo {
+  max-width: 180px;
+  width: 100%;
+}
+
+/* footer */
+.crowdfundly-footer__content1__content2__footer-content__footer-menu-item {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  color: #3f454f;
+}
+.crowdfundly-footer__content1__content2__footer-content__footer-menu-item.facebook-group
+  a {
+  color: #0070b0 !important;
+}
+
+.crowdfundly-footer__content1__content2__footer-content {
+  padding: 50px 30px 30px 30px !important;
+}
+
+/* affiliate page style */
+.crowdfundly-collapsible {
+  padding: 0px 0 30px 0 !important;
+}
+
+.affiliate-content-layout__affiliate-card__feature {
+  padding-bottom: 50px !important;
+}
+
+@media (max-width: 575.98px)  {
+  .crowdfundly-features-solution__main-blog__crowdfundly-features-solution {
+    padding-top: 0px !important;
+    padding-bottom: 50px !important;
+  }
+  .affiliate-content-layout__header__heading {
+    font-size: 18px !important;
+    line-height: 35px !important;
+  }
+  .crowdfundly-features-solution__main-blog__crowdfundly-features-solution__img {
+    display: none !important;
+  }
+  .affiliate-content-layout__affiliate-card__feature__desc {
+    padding-bottom: 25px !important;
+  }
+}
+
+/* ltd page commitment countdown style */
+.crowdfundly-discount-countdown__content_garantee {
+  height: 78.99px;
+  width: 80.75px;
+  transform: rotate(330deg);
+  position: absolute;
+  margin-top: 189px;
+  margin-left: 260px;
+}
+
+.crowdfundly-discount-countdown__content__text::before {
+  background: transparent !important;
+}
+
+/* demo popup responsive */
+
+@media (max-width: 425px) {
+  .demo-popup-title {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  .demo-popup-item{
+    padding: 10px !important;
+  }
+  .demo-popup-wrapper.show .demo-popup {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .demo-popup-wrapper.show .demo-popup {
+    height: 75vh !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* paypal payment page */
+.fluentform .ff-el-form-control {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  height: 60px;
+  background-color: white;
+  font-size: 14px;
+  padding: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  color: #3f454f;
+  font-family: "Work Sans", sans-serif;
+}
+
+.fluentform .ff-el-input--label label {
+  font-family: "Poppins", sans-serif !important;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.0015em;
+  color: #131a36;
+}
+
+button.ff-btn.ff-btn-submit.ff-btn-md.support-btn.ff_btn_style {
+  width: 100%;
+  border: none;
+  background-color: #0070b0;
+  height: 60px;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.ff-el-input--content > .ff-el-form-control {
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  color: #3f454f;
+  border-radius: 6px !important;
+  border: none;
+  padding: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.005em;
+  font-family: "Work Sans", sans-serif;
+  opacity: 60%;
+}
+.ff_submit_btn_wrapper > .ff_btn_no_style {
+	  width: 105px;
+    height: 60px;
+    background-color: #0070b0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.fluentform_wrapper_2>form>.ff-el-group>.ff-el-input--content {
+  width:400px;
+}
+.fluentform_wrapper_2>form>.ff_submit_btn_wrapper {
+  padding: 0px 0px 0px 10px;
+}
+
+/* better docs docs number background color */
+.betterdocs-categories-wrap .docs-item-count {
+  background-color: #528ffe !important;
+}
+.docs-single-main .betterdocs-breadcrumb {
+	float: left;
+	margin-right: 60px;
+}
+
+/* sale page countdown container style */
+.crowdfundly-discount-countdown {
+  height: 410px !important;
+}
+
+/* pagination style */
+.crowdfunly-blog-pagination .crowdfunly-blog-pagination__inner .crowdfunly-blog-pagination__inner-menu .page-numbers {
+  font-size: 15px;
+  font-weight: bold;
+}

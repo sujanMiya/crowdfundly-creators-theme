@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  rifat-x: hidden !important;
+}
+
+body {
+  background-color: #f1f6ff !important;
+  rifat-x: hidden !important;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.container {
+  max-width: 1170px;
+}
+
+img {
+  pointer-events: none;
+}
+
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Work Sans", sans-serif;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+/*# sourceMappingURL=common.css.map */

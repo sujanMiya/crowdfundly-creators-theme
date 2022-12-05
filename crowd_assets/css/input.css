@@ -1,0 +1,288 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Rubik:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&family=Rubik:wght@800&display=swap");
+
+:root {
+    /* color property */
+    --color-primary: #6a24ff;
+    --color-black: #111416;
+    --color-white: #ffffff;
+    --color-gray: #434b57;
+    --color-LightGray: #66667d;
+    --color-extraLightGray: #f2f2f2;
+    --color-red:#FF5F74
+
+    /* font family */
+
+    --font-nunito: "Nunito", sans-serif;
+    --font-openSans: "Open Sans", sans-serif;
+    --font-rubik: "Rubik", sans-serif;
+}
+
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /* font-family: var(--font-nunito); */
+    color: #202020;
+    font-family: var(--font-nunito);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 114.6rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.border-red{
+    border: 1px solid #FF5F74;
+}
+@layer utilities {
+    .heading-extra-large {
+        @apply font-rubik font-semibold 2xl:text-[7rem] lg:text-[6rem] md:text-[5rem] sm:text-[4rem] text-[2.5rem] md:leading-[8.4rem] leading-normal text-black;
+    }
+
+    .heading-large {
+        @apply font-rubik font-semibold 2xl:text-[4rem] lg:text-[4rem] md:text-[3rem] text-[2.5rem] md:leading-[5.4rem] leading-normal text-black;
+    }
+
+    .title {
+        @apply font-nunito font-normal md:text-[2rem] text-[1.6rem] leading-[2.8rem] text-lightGray tracking-[0.015em];
+    }
+
+    .sub-title {
+        @apply font-nunito font-normal md:text-[1.8rem] text-[1.6rem] leading-[2.6rem] text-lightGray tracking-[0.015em];
+    }
+
+    .btn-warning {
+        @apply bg-primary capitalize text-white transition-all duration-300 hover:bg-opacity-80 font-rubik;
+    }
+
+    .btn-primary {
+        @apply bg-primary capitalize text-white transition-all duration-300 hover:bg-opacity-80 font-rubik;
+    }
+}
+
+/* card css class */
+@layer utilities {
+     .card-wrapper{
+        @apply px-[0.8rem] pt-[0.8rem] rounded-[1.5rem] border border-[#F5F5F5];
+     }
+     .card-banner-img{
+        @apply w-full max-h-[14.6rem] h-full  rounded-[1.5rem] object-cover;
+     }
+     .card-user-img{
+        @apply user-avatar object-cover;
+     }
+     .card-detils{
+        @apply px-spacing16 pt-spacing24 pb-spacing20;
+     }
+     .card-user-name{
+        @apply font-nunito font-semibold text-[1.6rem] leading-[2.4rem] tracking-[0.015em] text-lightGray w-full;
+     }
+     .card-desc{
+        @apply font-nunito font-normal mt-spacing12 text-[1.6rem] leading-[2.4rem] tracking-[0.015em] text-lightGray w-full;
+     }
+     .card-info{
+        @apply flex gap-[1.4rem] items-center bg-extraLightGray rounded-full w-[17rem] py-[0.5rem] px-spacing12;
+     }
+     .card-status{
+        @apply text-lightGray font-nunito font-semibold text-[1.6rem] leading-[2.4rem] tracking-[0.015em]
+     }
+    
+}
+
+input[type="text"] {
+    color: #a5a5a5 !important;
+}
+
+
+@keyframes MoveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.svg-delay {
+    animation: moveRightToLeft 5s linear infinite;
+}
+
+@keyframes moveRightToLeft {
+
+    0%,
+    100% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-15px);
+    }
+}
+
+/*navbar styles */
+.nav-list :first-child {
+    margin-left: 0;
+}
+
+.addClass {
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 9 !important;
+    background-color: var(--color-white);
+    padding-right: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1 !important;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.35s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+    .overlay.is-active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        z-index: 9 important;
+    }
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active,
+.btn:hover {
+    color: var(--color-primary);
+}
+
+/* button */
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 1s;
+}
+
+a {
+    width: 90px;
+    font-family: Pacifico;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    color: #404040
+}
+
+a.home {
+    width: 200px;
+    margin-right: auto;
+    font-size: 2em;
+}
+
+.nav-up {
+    top: -100px;
+}
+
+/* animation tab style css  */
+
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 30px !important;
+}
+
+.owl-carousel .owl-item .user-avatar{
+    width: 53px !important;
+    height: 53px !important;
+    border-radius: 100% !important;
+    margin-top: -30px !important;
+    margin-left: 17px !important;
+    border: 2px solid #f5f5f5;
+    filter: drop-shadow(0px 1px 7px rgba(19, 33, 85, 0.09));
+}
+
+.button.owl-dot {
+    width: 0.8rem !important;
+    height: 0.8rem !important;
+    background: #F2F2F2 !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: #D7C5FF !important;
+}
+
+
+
+/* accordion */
+.accordion-container {
+    max-width:77rem;
+    width: 100%;
+    margin:auto;
+    margin-top: 80px;
+  }
+  .accord-header {
+    color: #111416;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  .accord-content {
+    height: max-content;
+    overflow: hidden;
+    transition: all 0.5s;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  .accord-body {
+    padding: 1rem 1.25rem;
+    font-family: var(--font-nunito);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.015em;
+    color: #434B57;
+    padding: 30px;
+
+  }
+
+  .accord-item{
+    border: 1px solid gray;
+  }
+  .accord-item:last-of-type {
+    border: none;
+  }
+  .collapse {
+    height: 0px;
+    transform: scaleY(0);
+  }

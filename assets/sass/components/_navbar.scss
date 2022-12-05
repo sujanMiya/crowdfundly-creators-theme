@@ -1,0 +1,925 @@
+// navbar: Header
+.crowdfundly-banner-content {
+  &__content2 {
+    &__content3 {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 459px;
+        height: 459px;
+        background-color: $lightblue;
+        border-radius: 50%;
+        left: -17%;
+        top: -211px;
+
+        @include media-breakpoint-down(xs) {
+          left: -85%;
+          display: none;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 459px;
+        height: 459px;
+        background-color: $red-100;
+        border-radius: 50%;
+        right: 0;
+        top: -238px;
+
+        @include media-breakpoint-down(xs) {
+          display: none;
+        }
+      }
+
+      width: 100%;
+      height: auto;
+      filter: blur(300px);
+      position: relative;
+
+      &__content4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__subcontent {
+          position: absolute;
+          width: 229px;
+          height: 229px;
+          background-color: $darkPurple;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, 50%);
+        }
+      }
+    }
+  }
+}
+
+.crowdfundly-navbar {
+  background: #ffffffb5;
+  position: relative;
+  box-shadow: 0px 4px 15px #00000008;
+  position: fixed;
+  width: 100%;
+  z-index: 1000000;
+}
+
+@media (max-width: 1103px) {
+  .crowdfundly-navbar {
+    background: $white !important;
+  }
+}
+
+.black {
+  transition: all 0.1s;
+  height: 100px;
+  width: 100%;
+  backdrop-filter: blur(34px);
+}
+
+@media (max-width: 1103px) {
+  .black {
+    background-color: #fff;
+    backdrop-filter: blur(transparent);
+  }
+}
+
+@media (max-width: 575px) {
+  .black {
+    height: 78px;
+  }
+}
+
+#header:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.search {
+  float: right;
+  padding: 30px;
+}
+
+input {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.logo {
+  float: left;
+  padding: 23px 0 26px;
+
+  @include media-breakpoint-down(xs) {
+    width: 120px;
+    height: auto;
+  }
+}
+
+.crowdfundly-logo {
+  width: 200px;
+  height: auto;
+
+  @include media-breakpoint-down(xs) {
+    width: 120px;
+    height: auto;
+  }
+}
+
+nav {
+  float: right;
+}
+
+nav > ul {
+  float: left;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 1103px) {
+  nav > ul {
+    display: flex;
+    align-items: center;
+    height: 100px;
+  }
+}
+
+nav li {
+  list-style: none;
+  float: left;
+}
+
+nav ul li a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  color: $black-300;
+  text-decoration: none !important;
+  text-transform: capitalize;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: $blue-400 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+nav .dropdown {
+  position: relative;
+}
+
+nav li a {
+  float: left;
+  padding-right: 30px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+nav li a:hover {
+  color: $blue-400;
+  transition: all 0.2s ease-in-out;
+}
+
+.fas.fa-sort-down {
+  position: absolute;
+  margin-top: -1px;
+  margin-left: 5px;
+}
+
+nav li li {
+  float: none;
+}
+
+nav li li a {
+  font-family: "Work Sans", sans-serif;
+  float: none;
+  color: $black-300;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.mega-col {
+  width: 25%;
+  float: left;
+}
+
+#menu-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -12px;
+  margin-right: 30px;
+  display: none;
+}
+
+#menu-icon span {
+  border: 1px solid rgb(0, 0, 0);
+  width: 30px;
+  margin-bottom: 5px;
+  display: block;
+  transition: all 0.4s;
+}
+
+.btn-link-desc {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  list-style: none;
+  line-height: 0;
+  padding-right: 0 !important;
+
+  @media (max-width: 1103px) {
+    display: none;
+  }
+}
+
+.nav-btn {
+  font-family: "Poppins", sans-serif !important;
+  background-color: $darklightblue;
+  width: 150px;
+  height: 60px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  color: $white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-3px);
+    box-shadow: 0px 12px 13px 2px #5776f31c;
+  }
+}
+
+.btn-link-desc {
+  color: $white !important;
+}
+
+.nav-btn {
+  color: $white !important;
+}
+
+@media only screen and (max-width: 1170px) {
+  nav > ul > li > a {
+    padding: 35px 15px;
+  }
+}
+
+@media only screen and (min-width: 1103px) {
+  nav {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 1103px) {
+  nav {
+    display: none;
+    width: 100%;
+    clear: both;
+    float: none;
+    max-height: 400px;
+    rifat-y: scroll;
+  }
+
+  #menu-icon {
+    display: inline;
+    top: 54px;
+    cursor: pointer;
+
+    @include media-breakpoint-down(xs) {
+      top: 40px;
+    }
+  }
+
+  #menu-icon.active .first {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-top: 10px;
+  }
+
+  #menu-icon.active .second {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: relative;
+    top: -9px;
+  }
+
+  #menu-icon.active .third {
+    display: none;
+  }
+
+  .search {
+    float: none;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  nav {
+    padding: 10px;
+    background-color: $white;
+  }
+
+  nav ul {
+    float: none;
+  }
+
+  nav li {
+    float: none;
+  }
+
+  nav ul li a {
+    float: none;
+    padding: 8px;
+    display: block;
+  }
+
+  #header nav ul ul {
+    position: static;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  #header nav a {
+    color: $black-300;
+    padding: 8px;
+    margin: 15px 0;
+  }
+
+  #header nav a:hover {
+    background: transparent;
+    color: #333;
+    border-radius: 3px;
+  }
+
+  #header nav ul li li a:before {
+    content: "- ";
+  }
+
+  .mega-col {
+    width: 100%;
+  }
+}
+
+//banner
+
+.crowdfundly-main-banner {
+  background-image: url(../../images/banner-img/banner\ bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 850px;
+  padding-top: 270px;
+  &.ltd {
+    background: none;
+    height: auto;
+  }
+  @include media-breakpoint-down(xs) {
+    padding-top: 136px;
+  }
+
+  &__crowdfundly-banner-desc {
+    &__header {
+      position: relative;
+
+      &-heading {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 75px;
+        color: $gray-400;
+        margin: 0;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 40px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          font-size: 24px;
+          line-height: 47px;
+        }
+      }
+
+      &-subheading {
+        margin-left: 10px;
+      }
+
+      &__header {
+      }
+
+      &-pill {
+        position: absolute;
+        top: -12%;
+        left: -2%;
+        width: 152px;
+        height: auto;
+
+        @include media-breakpoint-only(lg) {
+          top: -6%;
+          width: 125px;
+        }
+
+        @include media-breakpoint-only(md) {
+          left: -2%;
+          width: 132px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.005em;
+      color: $black-300;
+      margin: 0;
+      padding: 30.54px 0 50px 0;
+
+      @include media-breakpoint-down(xs) {
+        padding: 11.54px 0 32px 0;
+      }
+    }
+
+    &__btn-body {
+      display: flex;
+      align-items: center;
+      padding-bottom: 80px;
+
+      @include media-breakpoint-down(xs) {
+        padding-bottom: 100px;
+      }
+
+      &-left {
+        &-btn-st {
+          &-btn {
+            background-color: $blue-400;
+            width: 193px;
+            height: 60px;
+            border-radius: 6px;
+            border: none;
+            font-family: "Poppins", sans-serif !important;
+            color: $white;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              box-shadow: -4px 4px 20px $btnShadow;
+              background-color: $btnHover !important;
+              transition: all 0.3s ease-in-out;
+              transform: translateY(-3px);
+            }
+
+            @include media-breakpoint-down(xs) {
+              width: 125px;
+              height: 48px;
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      &-right {
+        padding-left: 30px;
+
+        &-btn-dm {
+          &-btn {
+            background-color: $blurborder;
+            border: 1px solid $blue-400;
+            width: 142px;
+            height: 60px;
+            border-radius: 6px;
+            font-family: "Poppins", sans-serif !important;
+            color: $blue-400;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              box-shadow: -4px 4px 20px $btnShadow;
+              background-color: $btnHover !important;
+              transition: all 0.3s ease-in-out;
+              transform: translateY(-3px);
+              color: $white;
+            }
+
+            @include media-breakpoint-down(xs) {
+              width: 125px;
+              height: 48px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &__about-crowdfundly {
+      position: relative;
+
+      &__after {
+        position: absolute;
+        background-color: $lightblue;
+        width: 80px;
+        height: 44px;
+        border-radius: 0 0 90px 90px;
+        z-index: 1;
+        left: -7%;
+        bottom: -18%;
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+
+      &-user {
+        rifat: hidden;
+        position: relative;
+        border-radius: 10px;
+        border: 2px solid $blurborder;
+        background-color: $blurbg;
+        z-index: 1;
+
+        @media (max-width: 991px) {
+          margin-bottom: 60px;
+        }
+
+        &-desc {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 30px;
+
+          &-heading {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.0015em;
+            color: $gray-400;
+            margin: 0;
+
+            @include media-breakpoint-down(xs) {
+              font-size: 16px;
+            }
+          }
+
+          &-title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.005em;
+            color: $gray-400;
+            margin: 0;
+            padding-top: 8px;
+          }
+        }
+
+        &-info {
+          background: $bgRgba;
+          width: 537px;
+          height: 126px;
+          filter: blur(65px);
+
+          @include media-breakpoint-down(xs) {
+            height: 306px;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $lightblue;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  &__crowdfundly-banner-img-desc {
+    &__box1 {
+      rifat: hidden;
+      width: 100%;
+      height: auto;
+      border: 2px solid $white;
+      border-radius: 10px;
+
+      @media (max-width: 1550px) {
+        width: 630px;
+      }
+
+      @media (max-width: 1450px) {
+        width: 580px;
+      }
+
+      @media (max-width: 1300px) {
+        width: 100%;
+      }
+
+      @media (max-width: 991) {
+        width: auto;
+      }
+
+      @media (max-width: 767px) {
+        height: 550px;
+        display: none;
+      }
+
+      @media (max-width: 575px) {
+        height: 350px;
+      }
+
+      @media (max-width: 370px) {
+        height: 260px;
+      }
+
+      &__box2 {
+        background-color: $blurbg;
+
+        &__image {
+          position: absolute;
+          top: 11%;
+          right: 0;
+          bottom: 0;
+          left: 10%;
+          &.ltd {
+            left: 14%;
+            top: 2%;
+          }
+          @media (max-width: 1550px) {
+            left: 16%;
+          }
+
+          @media (max-width: 1455px) {
+            left: 11%;
+          }
+
+          @media (max-width: 1300px) {
+            left: 9%;
+          }
+
+          @media (max-width: 1200px) {
+            left: 7%;
+          }
+
+          @media (max-width: 380px) {
+            left: 2%;
+          }
+
+          &-img {
+            width: auto;
+            height: auto;
+
+            @media (max-width: 1103px) {
+              width: 85%;
+            }
+
+            @media (max-width: 991px) {
+              width: 58%;
+              height: auto;
+              margin: auto;
+              display: flex;
+            }
+          }
+        }
+
+        &__bottom-shape {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &__sub-shape {
+            content: "";
+            position: absolute;
+            background-color: $darkPurple;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            bottom: 50%;
+            left: 50%;
+            z-index: -1;
+            transform: translate(-5%, 420%);
+
+            @include media-breakpoint-down(sm) {
+              display: none;
+            }
+            &.ltd {
+              display: none;
+            }
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: $lightblue;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          left: -3%;
+          top: 4%;
+          z-index: -1;
+
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: $yellow-500;
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          right: -12%;
+          top: -12%;
+          z-index: -1;
+
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+
+          @media (max-width: 1550px) {
+            right: -20%;
+          }
+
+          @media (max-width: 1450px) {
+            right: -10%;
+          }
+
+          @media (max-width: 1300px) {
+            right: 9%;
+            width: 80px;
+            height: 80px;
+            top: -6%;
+          }
+        }
+
+        &.ltd::after {
+          content: "";
+          display: none;
+        }
+
+        &__box3 {
+          width: 700px;
+          height: 586px;
+          filter: blur(65px);
+          position: relative;
+
+          @media (max-width: 1550px) {
+            width: 630px;
+          }
+
+          @media (max-width: 1450px) {
+            width: 580px;
+          }
+
+          @media (max-width: 1300px) {
+            width: 100%;
+          }
+
+          @media (max-width: 991) {
+            width: auto;
+          }
+
+          @media (max-width: 767px) {
+            height: 550px;
+          }
+
+          @media (max-width: 575px) {
+            height: 350px;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: $lightblue;
+            top: 9%;
+            left: -6%;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 188px;
+            height: 188px;
+            border-radius: 50%;
+            background-color: $yellow-500;
+            right: 32px;
+            top: -8%;
+
+            @media (max-width: 1200px) {
+              right: 0;
+            }
+          }
+          &.ltd::after {
+            content: "";
+            display: none;
+          }
+
+          &__box4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &__subbox {
+              content: "";
+              position: absolute;
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              background-color: $blue-400;
+              bottom: -7%;
+              &.ltd {
+                background-color: $blue-400;
+                bottom: 0;
+                right: 0;
+                width: 16rem;
+                height: 16rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.activeMenu {
+  color: $blue-400 !important;
+  position: relative;
+}
+
+.activeMenu::before {
+  content: "";
+  position: absolute;
+  background-color: $blue-400;
+  width: 15px;
+  height: 3px;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-23px, 18px);
+  border-radius: 10px;
+
+  @media (max-width: 1103px) {
+    display: none;
+  }
+}
+
+#counter {
+  span.percent1:after {
+    content: "K+";
+  }
+}
+
+#counter {
+  span.percent2:after {
+    content: "+";
+  }
+}

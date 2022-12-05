@@ -1,0 +1,126 @@
+/**
+ * Relevant CSS
+ * ------------
+ * This works best if you are building your own bootstrap from src and can use their functions to build classes for each shaded button color variant with specific background-colors for each type.
+ * You then also wouldn't need to include the extraneous .outline/.primary/.info etc. classes since you could use the bootstrap build functions instead to include your overrides.
+ * This codepen, however, is done without doing that in case you would rather use the pre-compiled version of bootstrap
+ */
+//bootstrap variables
+$primary: #007bff;
+$dark: #343a40;
+$info: #17a2b8;
+$danger: #dc3545;
+$input-btn-padding-x: 0.75rem !default;
+
+//configurable variables
+$btn-icon-shaded-bg-color: rgba(darken($dark, 20%), 0.3);
+$btn-icon-shaded-bg-primary-color: rgba(darken($primary, 15%), 0.5);
+$btn-icon-shaded-bg-danger-color: rgba(darken($danger, 15%), 0.5);
+$btn-icon-shaded-bg-info-color: rgba(darken($info, 15%), 0.5);
+$btn-icon-shaded-outline-bg-primary-color: rgba(lighten($primary, 15%), 0.3);
+$btn-icon-shaded-outline-bg-danger-color: rgba(lighten($danger, 15%), 0.3);
+$btn-icon-shaded-outline-bg-info-color: rgba(lighten($info, 15%), 0.3);
+$btn-icon-shaded-spacing: 1.2rem;
+$btn-icon-shaded-padding: 0.4rem;
+$btn-left-icon-margin: $input-btn-padding-x;
+$btn-right-icon-margin: $input-btn-padding-x;
+$btn-icon-padding: $input-btn-padding-x * 2 + $btn-icon-shaded-spacing;
+
+button.btn {
+    //basic buttons without shaded icons
+    &.btn-icon {
+        display: flex;
+
+        //when icon is given before text, render on left
+        //if i is an only child we shouldn't add a margin - it's an icon button
+        & > i:first-child:not(:only-child) {
+            margin-right: $btn-left-icon-margin;
+        }
+
+        //when icon is given after text, render on right
+        & > span + i {
+            margin-left: $btn-right-icon-margin;
+        }
+    }
+
+    //shaded buttons
+    &.shaded.btn-icon {
+        display: flex;
+        position: relative;
+
+        &.shaded {
+            & > i {
+                //center icons
+                display: flex;
+                align-items: center;
+
+                //place on top of button
+                position: absolute;
+                z-index: 100;
+                top: 0;
+                border-radius: 0;
+                padding: 0 $btn-icon-shaded-padding;
+                height: 100%;
+
+                &::before {
+                    background-color: $btn-icon-shaded-bg-color;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    //let icon appear over the overlay
+                    z-index: -10;
+                }
+            }
+        }
+
+        &.left.shaded {
+            padding-left: $btn-icon-padding;
+
+            & > i {
+                left: 0;
+                border-top-left-radius: inherit;
+                border-bottom-left-radius: inherit;
+                margin-right: $btn-left-icon-margin;
+            }
+        }
+
+        &.right.shaded {
+            padding-right: $btn-icon-padding;
+
+            & > i {
+                right: 0;
+                border-top-right-radius: inherit;
+                border-bottom-right-radius: inherit;
+                margin-left: $btn-right-icon-margin;
+            }
+        }
+
+        &.primary > i::before {
+            background-color: $btn-icon-shaded-bg-primary-color;
+        }
+
+        &.danger > i::before {
+            background-color: $btn-icon-shaded-bg-danger-color;
+        }
+
+        &.info > i::before {
+            background-color: $btn-icon-shaded-bg-info-color;
+        }
+
+        &.outline.primary > i::before {
+            background-color: $btn-icon-shaded-outline-bg-primary-color;
+        }
+
+        &.outline.danger > i::before {
+            background-color: $btn-icon-shaded-outline-bg-danger-color;
+        }
+
+        &.outline.info > i::before {
+            background-color: $btn-icon-shaded-outline-bg-info-color;
+        }
+    }
+}

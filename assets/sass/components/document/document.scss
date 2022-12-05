@@ -1,0 +1,275 @@
+.crowdfundly-ducument-card {
+  position: relative;
+}
+
+.crowdfunly-document-header {
+  position: relative;
+  padding: 150px 0 130px 0;
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 0 56px 0;
+  }
+
+  &__inner {
+    &-heading {
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 60px;
+      text-align: center;
+      letter-spacing: 0.0025em;
+      color: $gray-400;
+      margin: 0;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 30px;
+      }
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: 0.005em;
+      font-family: "Work Sans", sans-serif;
+      color: $black-300;
+      margin: 0;
+      padding: 20px 0 60px 0;
+    }
+
+    &__input-field {
+      font-family: "Work Sans", sans-serif;
+      width: 800px;
+      height: 80px;
+      background-color: $white;
+      opacity: 0.6;
+      border-radius: 6px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.005em;
+      color: $black-300;
+      padding: 20px;
+      @include media-breakpoint-down(sm) {
+        height: 50px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+    }
+
+    &-append {
+      position: absolute;
+      right: -1%;
+    }
+
+    &-btn {
+      width: 80px;
+      height: 80px;
+      background-color: $blue-400;
+      border: none;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      @include media-breakpoint-down(sm) {
+        width: 60px;
+        height: 50px;
+      }
+
+      &-icon {
+        font-size: 20px;
+        color: $white;
+        @include media-breakpoint-down(sm) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  &__bg-shape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(261px, 260px);
+
+    &-img {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  &__bg-shape1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: auto;
+    transform: translate(-190px, 493px);
+  }
+
+  &__bg-shape2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: auto;
+    transform: translate(190px, 1111px);
+  }
+
+  &__bg-shape3 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: auto;
+    transform: translate(-190px, -493px);
+  }
+}
+
+.crowdfundly-ducument-card {
+  &__info {
+    padding: 15px 0;
+
+    &__found-element1 {
+      width: 100%;
+      height: 100%;
+      background-color: #f1f6ff;
+      border-radius: 10px;
+      border: 1px solid white;
+      position: relative;
+      rifat: hidden;
+
+      &__content {
+        position: static;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 30px;
+
+        &--heading {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &-image-desc {
+            background-color: $darkPurple;
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+
+            &--details {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+
+              &-img {
+                width: 24px;
+                height: auto;
+              }
+            }
+          }
+
+          &-title {
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.0015em;
+            color: $darkPurple;
+            margin: 0;
+          }
+        }
+
+        &--body {
+          padding: 30px 0;
+
+          &-heading {
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.0015em;
+            color: $gray-400;
+            margin: 0;
+            padding-bottom: 25px;
+          }
+
+          &-menu {
+            padding: 0;
+
+            &-item {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 28px;
+              letter-spacing: 0.005em;
+              padding-bottom: 25px;
+              display: flex;
+              align-items: baseline;
+
+              &-desc {
+                padding-left: 12.25px;
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        &--footer {
+          display: flex;
+          align-items: center;
+
+          &-link {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.0015em;
+            color: $blue-400 !important;
+            margin: 0;
+            cursor: pointer;
+          }
+
+          &-arrow {
+            padding-left: 13px;
+          }
+        }
+      }
+    }
+
+    &__found-element3 {
+      position: relative;
+      filter: blur(70px);
+
+      &--ellipse {
+        position: absolute;
+        content: "";
+        width: 86px;
+        height: 86px;
+        background-color: $darkPurple;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        transform: translate(80px, 10px);
+      }
+
+      &--ellipse2 {
+        position: absolute;
+        content: "";
+        width: 70px;
+        height: 70px;
+        background-color: $lightblue;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        transform: translate(183px, 180px);
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+// Text truncate
+// Requires inline-block or block for proper styling
+
+@mixin text-truncate() {
+  rifat: hidden;
+  text-rifat: ellipsis;
+  white-space: nowrap;
+}
